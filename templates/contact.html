@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+
+
+{% block body %}
+<br>
+<form method="POST" action="" >
+{% csrf_token %}
+  <div class="form-group container ">
+    <label for="exampleInputText">Full Name</label>
+    <input name="name" type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+  </div>
+
+  <div class="form-group container ">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group container">
+    <label for="exampleInputPassword1">Massage</label>
+    <textarea name="massage" type="textarea" class="form-control" id="exampleInput"></textarea>
+  </div>
+  <div class="container">
+  <button type="submit" class="btn btn-primary">Submit</button></div>
+</form>
+
+{% endblock body %}
